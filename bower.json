@@ -1,0 +1,14 @@
+{
+  "name": "TodoNode",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+    </head>
+    <body ng-controller="comm.todo.TodoController as vm">
+        <div class="container">
+            <h2>Todo's List</h2>
+            <div class="row">
+                <div class="col-lg-10">
+                    <input type="text" ng-model="vm.newTodo.todo" class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-primary" ng-click="vm.addTodo(vm.newTodo);" >Agregar tarea</button>
+                </div>
+            </div>
+            <table class="table table-striped" style="padding-top: 50px">
+                <thead>
+                    <tr>
+                        <th>Tareas</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in vm.todos">
+                        <td>{{t.todo}}</td>
+                        <td>
+                            <input type="checkbox" ng-checked="t.estado" ng-model="t.estado">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="bundle.js" type="text/javascript"></script>
+    </body>
+</html>
