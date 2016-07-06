@@ -12,7 +12,7 @@ export module comm.todo {
         
         static $inject = ['$scope'];
         constructor(private $scope: ng.IScope) {
-            console.log('Hey, I just started.');
+            console.log('Hey, I just started!');
             this.todos = [];
             this.newTodo.estado = false;
         }

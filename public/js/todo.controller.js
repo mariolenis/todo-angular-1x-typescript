@@ -7,7 +7,7 @@ var comm;
             function TodoController($scope) {
                 this.$scope = $scope;
                 this.newTodo = {};
-                console.log('Hey, I just started.');
+                console.log('Hey, I just started!');
                 this.todos = [];
                 this.newTodo.estado = false;
             }
